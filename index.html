@@ -1,0 +1,550 @@
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 10px;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    margin: 20px auto;
+    max-width: 1200px; /* Optional: limit max width for larger screens */
+    padding: 0 10px; /* Optional: add some padding */
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 10px;
+}
+
+.image-container {
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Prevents image from being inline */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.5em;
+    }
+}
+</style>
+<style>
+.bn632-hover {
+  width: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn19 {
+  background-image: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+</style>
+<style>
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 3px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn18 {
+  background-image: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+</style>
+<style>
+.bn29 {
+  border: none;
+  padding: 0.8em 2.5em;
+  outline: none;
+  color: white;
+  font-style: 1.2em;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  background: none;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.45);
+}
+
+.bn29:before,
+.bn29:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10em;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  width: 105%;
+  height: 105%;
+  content: "";
+  z-index: -2;
+  background-size: 400% 400%;
+  background: linear-gradient(
+    60deg,
+    #f79533,
+    #f37055,
+    #ef4e7b,
+    #a166ab,
+    #5073b8,
+    #1098ad,
+    #07b39b,
+    #6fba82
+  );
+}
+
+.bn29:before {
+  -webkit-filter: blur(7px);
+  filter: blur(7px);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-animation: pulse 10s infinite ease;
+  animation: pulse 10s infinite ease;
+}
+
+.bn29:after {
+  -webkit-filter: blur(0.3px);
+  filter: blur(0.3px);
+}
+
+.bn29:hover:before {
+  width: 115%;
+  height: 115%;
+}
+</style>
+<style>
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn23 {
+  background-image: linear-gradient(
+    to right,
+    #009245,
+    #fcee21,
+    #00a8c5,
+    #d9e021
+  );
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+</style>
+<style>
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn27 {
+  background-image: linear-gradient(
+    to right,
+    #ed6ea0,
+    #ec8c69,
+    #f7186a,
+    #fbb03b
+  );
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+</style>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .gradient-background {
+        height: 100vh; /* Full viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgb(131, 58, 180);
+        background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(229, 16, 16, 1) 50%, rgba(252, 176, 69, 1) 100%);
+        color: white;
+        text-align: center;
+    }
+
+    .container {
+        max-width: 600px; /* Maximum width */
+        padding: 20px;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    }
+
+    h1 {
+        margin: 0 0 20px;
+        font-size: 2.5em; /* Heading size */
+    }
+
+    p {
+        font-size: 1.2em; /* Paragraph size */
+    }
+
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 2em; /* Smaller heading size on mobile */
+        }
+
+        p {
+            font-size: 1em; /* Smaller paragraph size on mobile */
+        }
+    }
+</style>
+  
+
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<div style="height:0px" id="bg-wrap"> <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice"> <defs> <radialGradient id="Gradient1" cx="50%" cy="50%" fx="0.441602%" fy="50%" r=".5"><animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 0, 255, 1)"></stop><stop offset="100%" stop-color="rgba(255, 0, 255, 0)"></stop></radialGradient> <radialGradient id="Gradient2" cx="50%" cy="50%" fx="2.68147%" fy="50%" r=".5"><animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(255, 255, 0, 0)"></stop></radialGradient> <radialGradient id="Gradient3" cx="50%" cy="50%" fx="0.836536%" fy="50%" r=".5"><animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 255, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 255, 0)"></stop></radialGradient> <radialGradient id="Gradient4" cx="50%" cy="50%" fx="4.56417%" fy="50%" r=".5"><animate attributeName="fx" dur="23s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0, 255, 0, 1)"></stop><stop offset="100%" stop-color="rgba(0, 255, 0, 0)"></stop></radialGradient> <radialGradient id="Gradient5" cx="50%" cy="50%" fx="2.65405%" fy="50%" r=".5"><animate attributeName="fx" dur="24.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(0,0,255, 1)"></stop><stop offset="100%" stop-color="rgba(0,0,255, 0)"></stop></radialGradient> <radialGradient id="Gradient6" cx="50%" cy="50%" fx="0.981338%" fy="50%" r=".5"><animate attributeName="fx" dur="25.5s" values="0%;5%;0%" repeatCount="indefinite"></animate><stop offset="0%" stop-color="rgba(255,0,0, 1)"></stop><stop offset="100%" stop-color="rgba(255,0,0, 0)"></stop></radialGradient> </defs> <!--<rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient4)"> <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" /> <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" /> <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite"/> </rect> <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient5)"> <animate attributeName="x" dur="23s" values="0%;-25%;0%" repeatCount="indefinite" /> <animate attributeName="y" dur="24s" values="25%;-25%;25%" repeatCount="indefinite" /> <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite"/> </rect> <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient6)"> <animate attributeName="x" dur="25s" values="-25%;0%;-25%" repeatCount="indefinite" /> <animate attributeName="y" dur="26s" values="0%;-25%;0%" repeatCount="indefinite" /> <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite"/> </rect>--> <rect x="13.744%" y="1.18473%" width="100%" height="100%" fill="url(#Gradient1)" transform="rotate(334.41 50 50)"><animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="7s" repeatCount="indefinite"></animateTransform></rect> <rect x="-2.17916%" y="35.4267%" width="100%" height="100%" fill="url(#Gradient2)" transform="rotate(255.072 50 50)"><animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite"></animate><animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite"></animateTransform> </rect> <rect x="9.00483%" y="14.5733%" width="100%" height="100%" fill="url(#Gradient3)" transform="rotate(139.903 50 50)"><animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite"></animate><animate attributeName="y" dur="12s" values="0%;25%;0%" repeatCount="indefinite"></animate><animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="9s" repeatCount="indefinite"></animateTransform> </rect> </svg> </div>
+  
+<body>
+    <style>
+        /* Button and layout styling */
+        .button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+            font-size: 16px;
+        }
+
+        #passwords, #transactionID {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<style>
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+    <div>
+        <input style="background-color:white;color:black" type="password" id="passwordInput" placeholder="Enter Password">
+        <button style="background-color:blue;color:white;"id="showTransactionButton">Show Transaction ID</button>
+        <p id="transactionIDDisplay"></p>
+    </div>
+
+    <!-- Section for changing passwords -->
+    <div>
+        <button style="background-color:red;color:white;" id="changePasswordsButton">osagwira: inuyo mungolowesa password yomwe mwalandira </button>
+        <div id="changePasswordForm" style="display:none;">
+            <input type="password" id="masterPasswordInput" placeholder="paja amalawi">
+            <input type="text" id="newPassword1" placeholder="1.muzinva inu">
+            <input type="text" id="newPassword3" placeholder="3.mwalipilakale kodi">
+            <input type="text" id="newPassword5" placeholder="5.kuno mukutaniko">
+            <button style="background-color:black;color:white;" id="savePasswordsButton">bwanji kodi</button>
+            <p id="changePasswordStatus"></p>
+        </div>
+    </div>
+
+    <script>
+        // Default passwords
+        let defaultPasswords = {
+            "password1": { id: generateRandomID(1), usage: 1 },
+            "password3": { id: generateRandomID(3), usage: 3 },
+            "password5": { id: generateRandomID(5), usage: 5 }
+        };
+
+        // Load passwords from localStorage or use defaults if not set
+        let passwords = JSON.parse(localStorage.getItem('passwords')) || defaultPasswords;
+
+        // Function to generate a random transaction ID
+        function generateRandomID(usageLimit) {
+            return `TXN${Math.floor(Math.random() * 10000)}-LIMIT${usageLimit}`;
+        }
+
+        // Store the generated transaction IDs every 2 minutes
+        setInterval(() => {
+            for (const key in passwords) {
+                passwords[key].id = generateRandomID(passwords[key].usage);
+            }
+            localStorage.setItem('passwords', JSON.stringify(passwords)); // Save updated IDs to localStorage
+        }, 120000); // 2 minutes in milliseconds
+
+        document.getElementById("showTransactionButton").addEventListener("click", function() {
+            const enteredPassword = document.getElementById("passwordInput").value;
+            const transactionInfo = passwords[enteredPassword];
+
+            if (transactionInfo) {
+                // Store the transaction ID in Local Storage
+                localStorage.setItem('transactionID', transactionInfo.id);
+                document.getElementById("transactionIDDisplay").textContent = "Transaction ID: " + transactionInfo.id;
+            } else {
+                document.getElementById("transactionIDDisplay").textContent = "Invalid Password!";
+            }
+        });
+
+        // Function to show the change password form
+        document.getElementById("changePasswordsButton").addEventListener("click", function() {
+            document.getElementById("changePasswordForm").style.display = "block";
+        });
+
+        // Function to save the new passwords
+        document.getElementById("savePasswordsButton").addEventListener("click", function() {
+            const enteredMasterPassword = document.getElementById("masterPasswordInput").value;
+
+            if (enteredMasterPassword === "kelly40") { // Master password check
+                const newPassword1 = document.getElementById("newPassword1").value;
+                const newPassword3 = document.getElementById("newPassword3").value;
+                const newPassword5 = document.getElementById("newPassword5").value;
+
+                if (newPassword1) {
+                    passwords[newPassword1] = { id: generateRandomID(1), usage: 1 };
+                }
+                if (newPassword3) {
+                    passwords[newPassword3] = { id: generateRandomID(3), usage: 3 };
+                }
+                if (newPassword5) {
+                    passwords[newPassword5] = { id: generateRandomID(5), usage: 5 };
+                }
+
+                // Remove old passwords to avoid conflict
+                delete passwords["password1"];
+                delete passwords["password3"];
+                delete passwords["password5"];
+
+                // Save the updated passwords to localStorage
+                localStorage.setItem('passwords', JSON.stringify(passwords));
+
+                document.getElementById("changePasswordStatus").textContent = "Passwords updated successfully!";
+                
+                // Hide the form after saving
+                document.getElementById("changePasswordForm").style.display = "none";
+            } else {
+                document.getElementById("changePasswordStatus").textContent = "Incorrect Master Password!";
+            }
+        });
+    </script>
+</body>
+</html>
+
+</body>
+</html>
+  <div class="gradient-background">
+    <div class="container">
+        <h1>Welcome to online burning center</h1>
+        <p>Takulandilani sakhani ntundu wa filimu umene mukufuna ku downloder koma choyamba  satilani njila zotumizila ndalama kuti mulandile code yo downlodeler</p>
+    
+ <div style="text-align:center" class="header">
+<button class="bn632-hover bn19"></a><a href="movie.html">ena ndi ena</a></button>
+<a href="movie.htlm"><button class="bn632-hover bn18"></a><a href="5.html">Ma India</a></button>
+<a href="/"><button class="bn29"></a><a href="3.html">Ma Nigeria</a></button>
+<a href="/"><button class="bn632-hover bn23"></a><a href="2.html">Ma Action</a></button>
+<a href="/"><button class="bn632-hover bn27"></a><a href="ke.html">Makatuni</a></button>
+ </div>
+</div>
+</body>
+</html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            color: #333;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+        nav a {
+            color: #333;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            color: #4CAF50;
+        }
+        .container {
+            padding: 20px;
+        }
+        .responsive-image {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            color: #333;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+  <p>
+
+    Deposit Instruction<br><br>
+
+
+    
+
+1. Tumizani ndalama ku mpamba or aitel money pa nambala iyi 0899898498 (phillimon mataya)<br><br> 
+2. mukatumiza mulandila password malingana ndi ndalama imene mwatumiza.<br><br>
+3. tengani password imeneyi ndi kuilemba pamene alemba kut enter password.<br><br>
+4. kenako dinani pa show transaction id ndipo tengani code imeneyo ndi kugwisa tchito  .<br><br>
+
+    sangalani ndi mafilimu achimalawi zikomo
+</p>
+
+

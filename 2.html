@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="movie.css">
+    <title>Swipable Image Galleries</title>
+    <style>
+        .gallery-container {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+            border-radius: px;
+            margin-bottom: px; /* Space between galleries */
+        }
+        .gallery {
+            display: flex;
+            transition: transform s ease-in-out;
+        }
+        .gallery-item {
+            position: relative;
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .gallery img {
+            border-radius: px;
+            width: 100%;
+            display: block;
+        }
+        .download-button {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+        }
+    </style>
+    <style>
+    .bn40 {
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: large;
+  padding: 4px 6px;
+  color: #fff !important;
+}
+
+.bn40::after {
+  max-width: 100%;
+  height: 2px;
+  display: block;
+  content: "";
+  background: linear-gradient(-90deg, #ff9100 0%, #f10366 50%, #6173ff 100%);
+  opacity: 1;
+  margin-bottom: -6px;
+  margin-top: 1px;
+}
+
+.bn40div {
+  display: flex;
+}
+    </style>
+</head>
+<body style="background: rgb(58,74,75);
+background: linear-gradient(0deg, rgba(58,74,75,1) 12%, rgba(115,97,97,1) 100%);">
+  <button class="Btn">
+  
+   <div class="sign"><svg viewBox="0 0 512 512"><path d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z"></path></svg></div>  
+  <div class="text"><a style="color:white" href="index.html">Back</div></a>
+</button>
+  <style>
+.Btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+  background-color: rgb(255, 65, 65);
+}
+
+.sign {
+  width: 100%;
+  transition-duration: .3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign svg {
+  width: 17px;
+}
+
+.sign svg path {
+  fill: white;
+}
+
+.text {
+  position: absolute;
+  right: 0%;
+  width: 0%;
+  opacity: 0;
+  color: white;
+  font-size: 1.2em;
+  font-weight: 600;
+  transition-duration: .3s;
+}
+
+.Btn:hover {
+  width: 125px;
+  border-radius: 40px;
+  transition-duration: .3s;
+}
+
+.Btn:hover .sign {
+  width: 30%;
+  transition-duration: .3s;
+  padding-left: 20px;
+}
+/* hover effect button's text */
+.Btn:hover .text {
+  opacity: 1;
+  width: 70%;
+  transition-duration: .3s;
+  padding-right: 10px;
+}
+/* button click effect*/
+.Btn:active {
+  transform: translate(2px ,2px);
+}
+  </style>
+    <style>
+/* Centering the parent container */
+.center-container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 28vh; /* Full height of the viewport */
+}
+
+/* From Uiverse.io by kamehame-ha */ 
+.light-button button.bt {
+  position: relative;
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.light-button button.bt .button-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #0a0a0a;
+  border-radius: 5px;
+  color: #0f0f0f;
+  font-weight: 700;
+  transition: 300ms;
+  outline: #0f0f0f 2px solid;
+  outline-offset: 20;
+}
+
+.light-button button.bt .button-holder img {
+  height: 50px;
+  transition: 300ms;
+}
+
+.light-button button.bt .light-holder {
+  position: absolute;
+  height: 200px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.light-button button.bt .light-holder .dot {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #0a0a0a;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.light-button button.bt .light-holder .light {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 200px;
+  clip-path: polygon(50% 0%, 25% 100%, 75% 100%);
+  background: transparent;
+}
+
+.light-button button.bt:hover .button-holder img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(100%) saturate(1054%) hue-rotate(205deg) brightness(96%) contrast(92%);
+}
+
+.light-button button.bt:hover .button-holder {
+  color: rgba(88, 101, 242, 1);
+  outline: rgba(88, 101, 242, 1) 2px solid;
+  outline-offset: 2px;
+}
+
+.light-button button.bt:hover .light-holder .light {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(88, 101, 242, 1) 0%,
+    rgba(255, 255, 255, 0) 75%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+</style>
+  <style>
+
+.button {
+  position: relative;
+  overflow: hidden;
+  height: 3rem;
+  padding: 0 2rem;
+  border-radius: 1.5rem;
+  background: #3d3a4e;
+  background-size: 400%;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  width: 100%;
+  height: inherit;
+  border-radius: inherit;
+  background: linear-gradient(
+    82.3deg,
+    rgba(150, 93, 233, 1) 10.8%,
+    rgba(99, 88, 238, 1) 94.3%
+  );
+  transition: all 0.475s;
+}
+
+  </style>
+
+<div class="center-container">
+  <div class="light-button">
+    <button class="bt">
+      <div class="light-holder">
+        <div class="dot"></div>
+        <div class="light"></div>
+      </div>
+      <div class="button-holder">
+        <h2>ma action</h2>
+      </div>
+    </button>
+  </div>
+</div>
+   <div className="bn40div">
+    <a class="bn40" >shamshera</a>
+</div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="s1.jpg" alt="Shamshera 1">
+                <button class="download-button" data-file-id="10bUZmmmY9-Xcznjb36nj-ZGSk2Gfn3xS">Download SHAMSHERA 1</button>
+            </div>
+            <div class="gallery-item">
+                <img src="s2.jpg" alt="Shamshera 2">
+                <button class="download-button" data-file-id="1-29H3zfgJQnTRijMLO69nJEpmqcFf54u">Download SHAMSHERA 2</button> <!-- Replace with the new file ID -->
+            </div>
+        </div>
+    </div>
+
+    <div className="bn40div">
+    <a class="bn40" >kelly</a>
+</div>
+    <div class="gallery-container">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="s3.jpg" alt="Shamshera 3">
+                <button class="download-button" data-file-id="1-ABC987654">Download SHAMSHERA 3</button> <!-- Replace with the new file ID -->
+            </div>
+            <div class="gallery-item">
+                <img src="s4.jpg" alt="Shamshera 4">
+                <button class="download-button" data-file-id="1-XYZ123456">Download SHAMSHERA 4</button> <!-- Replace with the new file ID -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add more galleries as needed -->
+
+    <p id="status"></p> <!-- Status message element -->
+
+    <script>
+        const galleries = document.querySelectorAll('.gallery');
+        
+        galleries.forEach(gallery => {
+            let startX;
+            let currentTranslate = 0;
+
+            gallery.addEventListener('touchstart', function(event) {
+                startX = event.touches[0].clientX;
+            });
+
+            gallery.addEventListener('touchmove', function(event) {
+                const currentX = event.touches[0].clientX;
+                const diffX = startX - currentX;
+                const maxTranslate = -(gallery.scrollWidth - gallery.clientWidth);
+
+                // Update the current translation value
+                currentTranslate -= diffX;
+
+                if (currentTranslate > 0) {
+                    currentTranslate = 0;
+                } else if (currentTranslate < maxTranslate) {
+                    currentTranslate = maxTranslate;
+                }
+
+                // Apply the translation to the gallery
+                gallery.style.transform = `translateX(${currentTranslate}px)`;
+
+                // Prevent default scrolling behavior
+                event.preventDefault();
+                startX = currentX;
+            });
+
+            gallery.addEventListener('touchend', function() {
+                // Implement snapping if needed
+            });
+        });
+
+        // Fetch the stored transaction ID from localStorage
+        const storedTransactionID = localStorage.getItem('transactionID');
+
+        document.querySelectorAll('.download-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                let enteredID = prompt("Enter Transaction ID:", "");
+                
+                // Compare entered ID with the stored ID
+                if (enteredID === storedTransactionID) {
+                    document.getElementById('status').textContent = "Transaction ID accepted! Starting download...";
+
+                    // Get the file ID from the button's data attribute
+                    const fileId = this.getAttribute('data-file-id');
+                    
+                    // Direct download link for Google Drive file
+                    const fileURL = `https://drive.google.com/uc?export=download&id=${fileId}`;
+
+                    // Create a temporary link element for file download
+                    const downloadLink = document.createElement('a');
+                    downloadLink.href = fileURL;
+                    downloadLink.download = ''; // Optional, set the downloaded file name
+                    downloadLink.style.display = 'none';
+                    document.body.appendChild(downloadLink);
+                    downloadLink.click();
+                    document.body.removeChild(downloadLink);
+                } else {
+                    document.getElementById('status').textContent = "Invalid Transaction ID!";
+                    event.preventDefault();
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
